@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
-import heroDesktop from "@/assets/hero_desktop.png.asset.json";
-import heroMobile from "@/assets/hero_mobile.png.asset.json";
+import heroDesktop from "@/assets/hero_desktop.png";
+import heroMobile from "@/assets/hero_mobile.png";
 import { MSG, waLink } from "@/lib/whatsapp";
 import { Stars, WhatsAppIcon } from "./icons";
 
@@ -33,9 +33,9 @@ export function Hero() {
   return (
     <section id="topo" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-deep">
       <picture>
-        <source media="(min-width: 768px)" srcSet={heroDesktop.url} />
+        <source media="(min-width: 768px)" srcSet={heroDesktop} />
         <img
-          src={heroMobile.url}
+          src={heroMobile}
           alt="Container Reefer branco com unidade de refrigeração Thermo King em pátio industrial sob céu azul"
           className="absolute inset-0 h-full w-full object-cover object-bottom md:object-[65%_75%]"
           fetchPriority="high"
@@ -144,7 +144,7 @@ export function Hero() {
       {/* Desktop commercial block */}
       <div className="container-edit absolute inset-x-0 bottom-0 z-10 hidden pb-10 md:flex md:items-end md:justify-between lg:pb-14">
         <div className="panel-glass max-w-[30rem] rounded-md p-8 lg:max-w-[34rem] lg:p-10">
-          <h1 className="text-4xl font-bold leading-[1.04] text-on-photo lg:text-5xl">
+          <h1 className="text-[2rem] font-bold leading-[1.04] text-on-photo lg:text-[2.625rem]">
             Containers refrigerados e soluções em refrigeração.
           </h1>
           <p className="mt-5 text-base leading-relaxed text-on-photo/85">

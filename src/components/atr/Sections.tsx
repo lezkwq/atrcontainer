@@ -1,14 +1,14 @@
 import { ArrowUpRight, ArrowRight, MapPin, Instagram } from "lucide-react";
-import reeferCurto from "@/assets/reefer_curto.jpg.asset.json";
-import reefer12 from "@/assets/reefer_12m_perspectiva.jpg.asset.json";
-import reefer12Grafite from "@/assets/reefer_12m_grafite.jpg.asset.json";
-import carrierEquip from "@/assets/carrier_equipamento.jpg.asset.json";
-import carrierContainer from "@/assets/carrier_container.jpg.asset.json";
-import tkDetalhe from "@/assets/thermo_king_detalhe.jpg.asset.json";
-import tkFrontal from "@/assets/thermo_king_frontal.jpg.asset.json";
-import manutencao from "@/assets/manutencao.jpg.asset.json";
-import equipe from "@/assets/equipe.jpg.asset.json";
-import logo from "@/assets/atr_logo.png.asset.json";
+import reeferCurto from "@/assets/reefer_curto.jpg";
+import reefer12 from "@/assets/reefer_12m_perspectiva.jpg";
+import reefer12Grafite from "@/assets/reefer_12m_grafite.jpg";
+import carrierEquip from "@/assets/carrier_equipamento.jpg";
+import carrierContainer from "@/assets/carrier_container.jpg";
+import tkDetalhe from "@/assets/thermo_king_detalhe.jpg";
+import tkFrontal from "@/assets/thermo_king_frontal.jpg";
+import manutencao from "@/assets/manutencao.jpg";
+import equipe from "@/assets/equipe.jpg";
+import logo from "@/assets/atr_logo.png";
 import {
   Accordion,
   AccordionContent,
@@ -98,7 +98,7 @@ export function Containers() {
         <div className="mt-14 grid gap-6 lg:grid-cols-12">
           <article className="flex flex-col bg-background lg:col-span-7">
             <img
-              src={reefer12.url}
+              src={reefer12}
               alt="Container Reefer de 12 metros em perspectiva com unidade Thermo King"
               loading="lazy"
               className="aspect-[4/3] w-full object-cover"
@@ -118,7 +118,7 @@ export function Containers() {
           <div className="grid gap-6 lg:col-span-5">
             <article className="grid bg-background sm:grid-cols-2">
               <img
-                src={reeferCurto.url}
+                src={reeferCurto}
                 alt="Container Reefer de menor comprimento com unidade de refrigeração"
                 loading="lazy"
                 className="aspect-[4/5] h-full w-full object-cover"
@@ -167,7 +167,7 @@ export function Equipamentos() {
       <div className="container-edit grid gap-10 lg:grid-cols-12 lg:gap-14">
         <figure className="lg:col-span-7">
           <img
-            src={carrierEquip.url}
+            src={carrierEquip}
             alt="Unidade de refrigeração Carrier instalada em container, com ventilador, painel e cabos visíveis"
             loading="lazy"
             className="aspect-square w-full object-cover"
@@ -197,7 +197,7 @@ export function Equipamentos() {
           </div>
           <div className="grid grid-cols-[minmax(0,140px)_minmax(0,1fr)] items-end gap-6 sm:grid-cols-[minmax(0,180px)_minmax(0,1fr)]">
             <img
-              src={tkDetalhe.url}
+              src={tkDetalhe}
               alt="Detalhe de unidade Thermo King com compressor e ventilador"
               loading="lazy"
               className="aspect-[3/4] w-full object-cover"
@@ -221,7 +221,7 @@ export function Manutencao() {
     <section id="manutencao" className="scroll-mt-4 bg-graphite text-deep-foreground">
       <div className="grid lg:grid-cols-2">
         <img
-          src={manutencao.url}
+          src={manutencao}
           alt="Técnico realizando trabalho de manutenção na estrutura de um container refrigerado"
           loading="lazy"
           className="h-full max-h-[880px] min-h-[420px] w-full object-cover object-[50%_70%]"
@@ -255,7 +255,7 @@ export function Sobre() {
       <div className="container-edit grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <img
-            src={logo.url}
+            src={logo}
             alt="Logotipo ATR Refrigeração"
             loading="lazy"
             className="h-28 w-28 rounded-md object-cover"
@@ -276,7 +276,7 @@ export function Sobre() {
         </div>
         <figure className="lg:col-span-7 lg:pt-16">
           <img
-            src={equipe.url}
+            src={equipe}
             alt="Profissionais da ATR em pátio com containers refrigerados"
             loading="lazy"
             className="aspect-[16/10] w-full object-cover"
@@ -297,19 +297,19 @@ export function Fotografias() {
         </h2>
         <div className="mt-12 grid gap-4 md:grid-cols-12 md:grid-rows-2">
           <img
-            src={reefer12Grafite.url}
+            src={reefer12Grafite}
             alt="Container Reefer cinza com unidade Thermo King em pátio"
             loading="lazy"
             className="aspect-square h-full w-full object-cover md:col-span-7 md:row-span-2"
           />
           <img
-            src={carrierContainer.url}
+            src={carrierContainer}
             alt="Container refrigerado branco com equipamento Carrier"
             loading="lazy"
             className="aspect-[4/3] h-full w-full object-cover md:col-span-5"
           />
           <img
-            src={tkFrontal.url}
+            src={tkFrontal}
             alt="Frente de unidade Thermo King com painel de controle"
             loading="lazy"
             className="aspect-[4/3] h-full w-full object-cover object-[50%_40%] md:col-span-5"

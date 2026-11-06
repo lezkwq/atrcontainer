@@ -28,3 +28,5 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Import site images from original binary files in src/assets so source exports and Git sync include self-contained images; retain historical CDN pointers without deleting their remote assets.

@@ -116,7 +116,7 @@ export function Hero() {
       </header>
 
       {/* Mobile copy, in the sky */}
-      <div className="container-edit absolute inset-x-0 top-[17%] z-10 md:hidden">
+      <div className="container-edit absolute inset-x-0 top-[15%] z-10 md:hidden">
         <h1 className="max-w-[14ch] text-[2.4rem] font-bold leading-[1.02] text-on-photo animate-rise">
           Containers refrigerados e soluções em refrigeração.
         </h1>
@@ -134,7 +134,7 @@ export function Hero() {
             <WhatsAppIcon className="h-4 w-4" />
           </span>
         </a>
-        <div className="mt-5 flex items-center gap-2 text-sm text-on-photo">
+        <div className="mt-5 flex flex-wrap items-center gap-2 text-sm text-on-photo">
           <Stars className="h-3.5 w-3.5" />
           <span className="font-semibold">5,0 no Google</span>
           <span className="opacity-80">· 32 avaliações</span>

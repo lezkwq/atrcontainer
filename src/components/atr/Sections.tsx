@@ -195,20 +195,19 @@ export function Equipamentos() {
               ))}
             </dl>
           </div>
-          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-6">
+          <div className="grid grid-cols-[minmax(0,140px)_minmax(0,1fr)] items-end gap-6 sm:grid-cols-[minmax(0,180px)_minmax(0,1fr)]">
             <img
               src={tkDetalhe.url}
               alt="Detalhe de unidade Thermo King com compressor e ventilador"
               loading="lazy"
-              className="aspect-[3/4] w-full max-w-[220px] object-cover"
+              className="aspect-[3/4] w-full object-cover"
             />
-            <div />
-          </div>
-          <div>
-            <CtaLink href={waLink(MSG.equipamentos)}>Consultar equipamentos e peças</CtaLink>
-            <p className="mt-4 text-xs text-muted-foreground">
-              Thermo King e Carrier são marcas de seus respectivos fabricantes.
-            </p>
+            <div className="min-w-0">
+              <CtaLink href={waLink(MSG.equipamentos)}>Consultar equipamentos e peças</CtaLink>
+              <p className="mt-4 text-xs text-muted-foreground">
+                Thermo King e Carrier são marcas de seus respectivos fabricantes.
+              </p>
+            </div>
           </div>
         </div>
       </div>

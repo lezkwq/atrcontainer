@@ -144,7 +144,7 @@ export function Hero() {
       {/* Desktop commercial block */}
       <div className="container-edit absolute inset-x-0 bottom-0 z-10 hidden pb-10 md:flex md:items-end md:justify-between lg:pb-14">
         <div className="panel-glass max-w-[30rem] rounded-md p-8 lg:max-w-[34rem] lg:p-10">
-          <h1 className="text-[2rem] font-bold leading-[1.04] text-on-photo lg:text-[2.625rem]">
+          <h1 className="relative top-2 text-[1.875rem] font-bold leading-[1.04] text-on-photo lg:text-[2.375rem]">
             Containers refrigerados e soluções em refrigeração.
           </h1>
           <p className="mt-5 text-base leading-relaxed text-on-photo/85">

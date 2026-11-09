@@ -19,7 +19,7 @@ const right = [
 function Brand() {
   return (
     <a href="#topo" aria-label="ATR Refrigeração e Container, início" className="flex justify-center">
-      <BrandLogo className="h-10 w-auto sm:h-12" />
+      <BrandLogo className="h-11 w-auto sm:h-14" />
     </a>
   );
 }

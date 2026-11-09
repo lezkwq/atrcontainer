@@ -3,6 +3,7 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 import heroDesktop from "@/assets/hero_desktop.png";
 import heroMobile from "@/assets/hero_mobile.png";
 import { MSG, waLink } from "@/lib/whatsapp";
+import { BrandLogo } from "./BrandLogo";
 import { Stars, WhatsAppIcon } from "./icons";
 
 const left = [
@@ -17,11 +18,8 @@ const right = [
 
 function Brand() {
   return (
-    <a href="#topo" className="flex flex-col items-center leading-none text-on-photo">
-      <span className="font-display text-3xl font-extrabold tracking-[-0.04em] sm:text-4xl">ATR</span>
-      <span className="mt-1 text-[0.65rem] font-medium uppercase tracking-[0.22em] opacity-90 sm:text-[0.7rem]">
-        Refrigeração e Container
-      </span>
+    <a href="#topo" aria-label="ATR Refrigeração e Container, início" className="flex justify-center">
+      <BrandLogo className="h-10 w-auto sm:h-12" />
     </a>
   );
 }

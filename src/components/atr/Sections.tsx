@@ -16,6 +16,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ADDRESS, INSTAGRAM_URL, MAPS_URL, MSG, waLink } from "@/lib/whatsapp";
+import { BrandLogo } from "./BrandLogo";
 import { Stars, WhatsAppIcon } from "./icons";
 
 const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
@@ -425,8 +426,7 @@ export function Rodape() {
     <footer id="contato" className="scroll-mt-4 bg-graphite pt-20 text-deep-foreground">
       <div className="container-edit grid gap-12 pb-16 md:grid-cols-12">
         <div className="md:col-span-5">
-          <p className="font-display text-5xl font-extrabold tracking-[-0.05em]">ATR</p>
-          <p className="eyebrow mt-2 text-deep-foreground/70">Refrigeração e Container</p>
+          <BrandLogo className="h-16 w-auto sm:h-20" />
         </div>
         <div className="space-y-4 text-sm md:col-span-4">
           <a href={MAPS_URL} {...ext} className="flex gap-3 hover:text-signal">

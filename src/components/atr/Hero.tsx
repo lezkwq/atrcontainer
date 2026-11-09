@@ -132,10 +132,12 @@ export function Hero() {
             <WhatsAppIcon className="h-4 w-4" />
           </span>
         </a>
-        <div className="mt-5 flex flex-wrap items-center gap-2 text-sm text-on-photo">
-          <Stars className="h-3.5 w-3.5" />
-          <span className="font-semibold">5,0 no Google</span>
-          <span className="opacity-80">· 32 avaliações</span>
+        <div className="mt-5 flex w-fit items-center gap-3 rounded-lg bg-on-photo px-3.5 py-2.5 text-deep shadow-sm">
+          <Stars />
+          <div>
+            <p className="text-base font-bold leading-tight">5,0 no Google</p>
+            <p className="mt-0.5 text-sm leading-tight">32 avaliações</p>
+          </div>
         </div>
       </div>
 

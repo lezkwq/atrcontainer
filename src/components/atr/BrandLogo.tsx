@@ -1,4 +1,4 @@
-import logo from "@/assets/atr_logo_transparente.png";
+import logo from "@/assets/atr_logo_transparente.webp";
 
 export function BrandLogo({ className }: { className: string }) {
   // Frame the visible logo within the original square PNG.

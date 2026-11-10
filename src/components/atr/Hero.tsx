@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
-import heroDesktop from "@/assets/hero_desktop.png";
-import heroMobile from "@/assets/hero_mobile.png";
+import heroDesktop from "@/assets/hero_desktop.webp";
+import heroMobile from "@/assets/hero_mobile.webp";
 import { MSG, waLink } from "@/lib/whatsapp";
 import { BrandLogo } from "./BrandLogo";
 import { Stars, WhatsAppIcon } from "./icons";

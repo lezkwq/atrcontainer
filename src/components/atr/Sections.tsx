@@ -117,12 +117,12 @@ export function Containers() {
           </article>
 
           <div className="grid gap-6 lg:col-span-5">
-            <article className="grid bg-background sm:grid-cols-2">
+            <article className="flex flex-col bg-background sm:grid sm:grid-cols-2">
               <img
                 src={reeferCurto}
                 alt="Container Reefer de menor comprimento com unidade de refrigeração"
                 loading="lazy"
-                className="aspect-[4/5] h-full w-full object-cover"
+                className="aspect-[4/5] w-full object-cover sm:h-full"
               />
               <div className="flex flex-col justify-between gap-6 p-7">
                 <div>

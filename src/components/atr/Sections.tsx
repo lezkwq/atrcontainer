@@ -196,14 +196,14 @@ export function Equipamentos() {
               ))}
             </dl>
           </div>
-          <div className="grid grid-cols-[minmax(0,140px)_minmax(0,1fr)] items-end gap-6 sm:grid-cols-[minmax(0,180px)_minmax(0,1fr)]">
+          <div className="grid grid-cols-[minmax(0,140px)_minmax(0,1fr)] items-end gap-6 max-[359px]:grid-cols-[minmax(0,104px)_minmax(0,1fr)] max-[359px]:gap-4 sm:grid-cols-[minmax(0,180px)_minmax(0,1fr)]">
             <img
               src={tkDetalhe}
               alt="Detalhe de unidade Thermo King com compressor e ventilador"
               loading="lazy"
               className="aspect-[3/4] w-full object-cover"
             />
-            <div className="min-w-0">
+            <div className="min-w-0 max-[359px]:[&>a]:gap-2 max-[359px]:[&>a]:px-3">
               <CtaLink href={waLink(MSG.equipamentos)}>Consultar equipamentos e peças</CtaLink>
               <p className="mt-4 text-xs text-muted-foreground">
                 Thermo King e Carrier são marcas de seus respectivos fabricantes.

@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { createIsomorphicFn } from "@tanstack/react-start";
-import { getRequestUrl } from "@tanstack/react-start/server";
+import heroImage from "@/assets/hero_desktop.png";
 import { Hero } from "@/components/atr/Hero";
 import {
   Avaliacoes,
@@ -15,13 +14,45 @@ import {
   Sobre,
   WhatsAppFlutuante,
 } from "@/components/atr/Sections";
+import { BUSINESS_ADDRESS, INSTAGRAM_URL, MAPS_URL, WHATSAPP_NUMBER } from "@/lib/whatsapp";
 
-const title = "ATR Refrigeração e Container | Containers Reefer em Itajaí, SC";
+const siteUrl = "https://www.atrrefrigeracao.com.br/";
+const businessName = "ATR Refrigeração e Container";
+const title = `${businessName} | Containers Reefer em Itajaí, SC`;
 const description =
-  "Venda de containers refrigerados Reefer, equipamentos, peças e manutenção especializada em refrigeração de containers. Itajaí, SC.";
-const getSiteOrigin = createIsomorphicFn()
-  .server(() => getRequestUrl().origin)
-  .client(() => window.location.origin);
+  "Venda de containers Reefer, equipamentos e peças de refrigeração e manutenção especializada em São Vicente, Itajaí, SC.";
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `${siteUrl}#atr`,
+  name: businessName,
+  description,
+  url: siteUrl,
+  image: new URL(heroImage, siteUrl).href,
+  telephone: `+${WHATSAPP_NUMBER}`,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: `${BUSINESS_ADDRESS.street}, ${BUSINESS_ADDRESS.neighborhood}`,
+    addressLocality: BUSINESS_ADDRESS.city,
+    addressRegion: BUSINESS_ADDRESS.state,
+    postalCode: BUSINESS_ADDRESS.postalCode,
+    addressCountry: "BR",
+  },
+  hasMap: MAPS_URL,
+  sameAs: [INSTAGRAM_URL],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Containers refrigerados e soluções em refrigeração",
+    itemListElement: [
+      "Venda de containers Reefer",
+      "Venda de equipamentos e peças de refrigeração",
+      "Manutenção de containers refrigerados",
+    ].map((name) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name },
+    })),
+  },
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,13 +62,16 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: new URL("/og-atr-refrigeracao.png", getSiteOrigin()).href },
+      { property: "og:url", content: siteUrl },
+      { property: "og:image", content: new URL("/og-atr-refrigeracao.png", siteUrl).href },
       { property: "og:image:type", content: "image/png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:alt", content: "Logotipo ATR Refrigeração sobre fundo branco" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: siteUrl }],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify(businessSchema) }],
   }),
   component: Index,
 });

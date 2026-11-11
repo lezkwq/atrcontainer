@@ -15,6 +15,7 @@ const right = [
   { href: "#sobre", label: "Sobre" },
   { href: "#contato", label: "Contato" },
 ];
+const heading = "Containers refrigerados e soluções em refrigeração.";
 
 function Brand() {
   return (
@@ -30,6 +31,7 @@ export function Hero() {
 
   return (
     <section id="topo" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-deep">
+      <h1 className="sr-only">{heading}</h1>
       <picture>
         <source media="(min-width: 768px)" srcSet={heroDesktop} />
         <img
@@ -115,9 +117,12 @@ export function Hero() {
 
       {/* Mobile copy, in the sky */}
       <div className="container-edit absolute inset-x-0 top-[15%] z-10 md:hidden">
-        <h1 className="max-w-[14ch] text-[2.4rem] font-bold leading-[1.02] text-on-photo animate-rise">
-          Containers refrigerados e soluções em refrigeração.
-        </h1>
+        <p
+          aria-hidden="true"
+          className="max-w-[14ch] font-display text-[2.4rem] font-bold leading-[1.02] tracking-[-0.03em] text-on-photo animate-rise"
+        >
+          {heading}
+        </p>
         <p className="mt-4 max-w-[34ch] text-base leading-relaxed text-on-photo/90">
           Venda de containers Reefer, equipamentos, peças e manutenção especializada.
         </p>
@@ -144,9 +149,12 @@ export function Hero() {
       {/* Desktop commercial block */}
       <div className="container-edit absolute inset-x-0 bottom-0 z-10 hidden pb-10 md:flex md:items-end md:justify-between lg:pb-14">
         <div className="panel-glass max-w-[30rem] rounded-md p-8 lg:max-w-[34rem] lg:p-10">
-          <h1 className="relative top-2 text-[1.875rem] font-bold leading-[1.04] text-on-photo lg:text-[2.375rem]">
-            Containers refrigerados e soluções em refrigeração.
-          </h1>
+          <p
+            aria-hidden="true"
+            className="relative top-2 font-display text-[1.875rem] font-bold leading-[1.04] tracking-[-0.03em] text-on-photo lg:text-[2.375rem]"
+          >
+            {heading}
+          </p>
           <p className="mt-5 text-base leading-relaxed text-on-photo/85">
             Venda de containers Reefer, equipamentos, peças e manutenção especializada. Soluções para quem
             precisa de refrigeração confiável.

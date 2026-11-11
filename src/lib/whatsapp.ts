@@ -20,8 +20,20 @@ export const MSG = {
 };
 
 export const INSTAGRAM_URL = "https://www.instagram.com/atrcontainer/";
-export const ADDRESS =
-  "Rua Professora Erotides da Silva Fontes, 2120, São Vicente, Itajaí, SC, CEP 88309-600";
+export const BUSINESS_ADDRESS = {
+  street: "Rua Professora Erotides da Silva Fontes, 2120",
+  neighborhood: "São Vicente",
+  city: "Itajaí",
+  state: "SC",
+  postalCode: "88309-600",
+};
+export const ADDRESS = [
+  BUSINESS_ADDRESS.street,
+  BUSINESS_ADDRESS.neighborhood,
+  BUSINESS_ADDRESS.city,
+  BUSINESS_ADDRESS.state,
+  `CEP ${BUSINESS_ADDRESS.postalCode}`,
+].join(", ");
 export const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   "ATR Refrigeração e Container, " + ADDRESS,
 )}`;
